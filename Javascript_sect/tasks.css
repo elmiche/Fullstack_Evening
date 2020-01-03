@@ -1,0 +1,42 @@
+html {
+    text-align: left;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.task-incomplete-block h4 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.total-task {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+ 
+
+.completed-task-list {
+    text-decoration: line-through;
+}
+
+
+.task-1-incompletes:hover {
+    background: rgb(240, 164, 51);
+}
+
+.task-2-completes:hover {
+    background: rgb(95, 97, 231);
+}
+
+
+#outder-div {
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    align-items: center;
+
+}

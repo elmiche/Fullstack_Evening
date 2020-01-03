@@ -1,0 +1,58 @@
+
+
+
+div {
+    background-color: mistyrose;
+}
+
+
+.intro-words {
+    text-align: center;
+    font-family: 'Courier New';
+}
+.fit-picture {
+    width: 400px;
+    align-self: center;
+    border-radius: 20px;
+    border-color: darkgoldenrod;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.image_holder {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.ada-self {
+    width: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(164, 127, 172);
+    padding: 5px;
+    text-align: left;
+    padding: 5px;
+    float: left;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: circle;
+  }
+
+.places-lived {
+    text-align: left;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.quote-item {
+    padding: 10px;
+    text-align: center;
+    font-family: cursive;
+}
