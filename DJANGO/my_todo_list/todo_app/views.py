@@ -4,6 +4,9 @@ from django.http import HttpResponse
 
 from .models import Todo
 
+def home(request):
+    return HttpResponse('<h1> Home page </h1>')
+
 def todo_list(request):
     return HttpResponse('hello from the todo_list view')
 
@@ -22,5 +25,6 @@ def update_todo(request, id):
 def update(request, id):
     return HttpResponse('hello from the update view')
 
-
+def mark_done(request, id):
+    return HttpResponse('hello from the update view')
 
