@@ -4,6 +4,9 @@ from django.http import HttpResponse
 
 from .models import Todo
 
+def home(request)
+    return HttpResponse('<h1>Blog Home</h1>')
+
 def todo_list(request):
     return HttpResponse('hello from the todo_list view')
 
