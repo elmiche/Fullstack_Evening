@@ -6,4 +6,4 @@ def index(request):
     return HttpResponse('hello from the index/home view')
 
 def about(request):
-    return HttpResponse('hello from the about view')
+    return HttpResponse('hello from the about view') 
