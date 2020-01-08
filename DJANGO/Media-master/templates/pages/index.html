@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<a href = "{%url 'upload'%}">upload images</a>
+
+{% for image in images %}
+<img src ="{{image.my_image.url}}"></img>
+
+{%empty%}
+no images to display
+
+{%endfor%}
+
+
+{% endblock %}
