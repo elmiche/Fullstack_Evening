@@ -4,11 +4,11 @@ from django.http import HttpResponse
 
 from .models import Todo
 
-def home(request):
-    return HttpResponse('<h1> Home page </h1>')
+# def home(request):
+#   return HttpResponse('hello from the home view')
 
 def todo_list(request):
-    return HttpResponse('hello from the todo_list view')
+     return render(request, 'list.html')
 
 def details(request, id):
     return HttpResponse('hello from the details view')
