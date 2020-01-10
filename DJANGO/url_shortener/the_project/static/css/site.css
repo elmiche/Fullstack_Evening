@@ -1,9 +1,0 @@
-
-h2 {
-    color: firebrick;
-}
-
-inside *main.js* add the following:
-javascript
-console.log('hello from main.js')
-    
