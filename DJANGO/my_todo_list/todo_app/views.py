@@ -2,22 +2,46 @@ from django.shortcuts import render, redirect
 
 from django.http import HttpResponse
 
-from .models import Todo
+from .models import Todo  #importing the Todo class from models.py
 
 # def home(request):
 #   return HttpResponse('hello from the home view')
 
 def todo_list(request):
-     return render(request, 'list.html')
-
-def details(request, id):
-    return HttpResponse('hello from the details view')
+    todos = Todo.objects.all()
+    context = {
+        'todos': todos
+    }
+    return render(request, 'todos/list.html', context) #this is the template path
 
 def add_todo(request):
-    return HttpResponse('hello from the add_todo view')
+    if request.method == 'POST':  #needed to send form to the url todo/add
+        title = request.POST['title'] #the 'name' of the labels/tags in add.html
+        text = request.POST['text']
+        if (request.POST['status'] == 'False'):
+            status = False
+        else:
+            status = True
+        Todo.objects.create( title = title, text = text, status = status)
+        return render(request, 'todos/list.html') #this is the template path
+    else: 
+        return render(request, 'todos/add.html') #this is the template path
 
+
+def details(request, id):
+    todo = Todo.objects.get(id = id)
+    return render(request, 'todos/detail.html', {"todo": todo})
+
+def mark_done(request, id):
+    # return HttpResponse('hello from the update view')
+    todo = Todo.objects.get(id = id)
+    todo.status = True
+    todo.save()
+    return redirect('details', todo.id)
 def remove_todo(request, id):
-    return HttpResponse('hello from the remove view')
+    todo = Todo.objects.get(id = id)
+    todo.delete()
+    return redirect('list')
 
 def update_todo(request, id):
     return HttpResponse('hello from the update_todo view')
@@ -25,6 +49,5 @@ def update_todo(request, id):
 def update(request, id):
     return HttpResponse('hello from the update view')
 
-def mark_done(request, id):
-    return HttpResponse('hello from the update view')
+
 
