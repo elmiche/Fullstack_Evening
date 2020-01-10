@@ -38,16 +38,32 @@ def mark_done(request, id):
     todo.status = True
     todo.save()
     return redirect('details', todo.id)
+
 def remove_todo(request, id):
     todo = Todo.objects.get(id = id)
     todo.delete()
     return redirect('list')
 
 def update_todo(request, id):
-    return HttpResponse('hello from the update_todo view')
+    todo = Todo.objects.get(id = id)
+    print(request.POST['description'])
+    return redirect('details', todo.id)  #details page
 
 def update(request, id):
+    todo = Todo.objects.get(id = id)
+    if request.method == 'GET':
+        return render(request, 'todos/update.html', {'todo': todo})
+    elif request.method == 'POST':
+        todo.title = request.POST['title']
+        todo.text = request.POST['text']
+        if (request.POST['status'] == 'False'):
+            todo.status = False
+        else:
+            todo.status = True
+        todo.save()
+        return redirect('details', todo.id)
     return HttpResponse('hello from the update view')
+
 
 
 
