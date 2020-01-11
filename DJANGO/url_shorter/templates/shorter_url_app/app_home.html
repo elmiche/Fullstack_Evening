@@ -5,9 +5,11 @@
 {% block content %}
 
 <h1>This is the view form the app_home page</h1>
-<form action="", method="POST">
-
+<form action="{% url 'app-home' %}" method="POST">
+    {% csrf_token %}
+    url: <br> <input type="text" name="url" placeholder="enter url title"><br>
+   
+      <br>
+    <input type="submit" value="submit">
 </form>
-
-
 {% endblock %}

@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils import timezone
-# Create your models here.
+# Create your models here.git
 
 class Shorter_url(models.Model):
-    content = models.CharField(max_legnth=4000)
-    date_posted = models.DateTimeField(models.DateTimeField(default=timezone.now))
-    return render()
+    url = models.URLField()
+    date_posted = models.DateTimeField(default=timezone.now)
 
 
     def __str__(self):
         return self.title
+        #cleans up the admin panel
