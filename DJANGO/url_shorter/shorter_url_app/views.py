@@ -6,5 +6,6 @@ from django.http import HttpResponse
 
 def home(request):
     # print('hello')
-    return render(request, 'app_home.html')
+    return render(request, 'shorter_url_app/app_home.html')
     # return HttpResponse('hello')
+
