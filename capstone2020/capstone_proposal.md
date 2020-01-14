@@ -1,7 +1,7 @@
 # Capstone Proposal
 ###### by Miché Lozano
 
-### Project Name: #Street Biter
+### Project Name: Street Biter
 
 ## Overview
 ###### Project Goal: Shows coordinates with details on spots where you can find berry bushes and edible plants/trees around portland.
