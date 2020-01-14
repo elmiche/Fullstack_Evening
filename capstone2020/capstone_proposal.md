@@ -1,13 +1,13 @@
 # Capstone Proposal
 ###### by Miché Lozano
 
-## Project Name: Street Biter
+### Project Name: #Street Biter
 
-## Project Overview
+## Overview
 ###### Project Goal: Shows coordinates with details on spots where you can find berry bushes and edible plants/trees around portland.
 
 
-## Requirements
+### Requirements
 ######  Python, HTML, CSS, JavaScript, and Django.
 * Specific and attainable goals: 
     1. Create a website that shows coordinates with details on local berry bushes and edible plants around portland.
