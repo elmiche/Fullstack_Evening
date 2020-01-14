@@ -33,7 +33,7 @@
 * provide resources for free food and foraging resources
 * Love thy neighbor: those with an abundance can help those in need.
 * creates community around a sharing economy
-
+ 
 **What libraries or frameworks will you use?**
 * Bootstrap
 * Leaflet API
