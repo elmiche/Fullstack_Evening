@@ -12,7 +12,8 @@
 * Specific and attainable goals: 
     1. Create a website that shows coordinates with details on local berry bushes and edible plants around portland.
     2. Complete 1 feature of project per week: framework, database, map, users, API, Front-end  etc.
-    3. Show different types of plants, information about plants, and details entered by users, 
+    3. Show different types of plants, information about plants, and details entered by users.
+
 **REACH GOAL:** Allows users to update status of plants, including TOXIC plants with different colored symbols on map etc
 
 
@@ -20,18 +21,17 @@
 * User login
 * User Profile
 * Navigation Bar: Home, user profile, user spots: favorites
-* Users - Adding Coordinate Points 
+* Users - Adding Coordinate Points or cross streets?
 * Coordinates with details
     * Plant Type: (user entry) or Black berry, cloud berry, Marrion Berry, Hawethorne, Apple, uknown, etc.
     * Edible: y/n 
     * Date Added
     * Photo/ media upload 
-    * Add to favorites
-* Display on MAP by Leaflet
-* BLOG - Controlled by Admin
+* Display coordinate marker on a Leaflet map
+* **REACH:** BLOG - Controlled by Admin, Add to favorites, Plant Facts - info resources.
 
 **What problem is it attempting to solve?** 
-* provide resources for free food and foraging resources
+* provide free food and foraging resources
 * Love thy neighbor: those with an abundance can help those in need.
 * creates community around a sharing economy
  
@@ -42,6 +42,7 @@
 
 ## Functionality 
 email using django built-in email thingy (maybe unnecessary)
+
 Users Adding Coordinates, then leaflet map displays coordinates (very necessary)
 
 
@@ -53,7 +54,7 @@ Users Adding Coordinates, then leaflet map displays coordinates (very necessary)
     * Coordinates
     * Details about Sweet Spot
     * Admin Notes (in bold)
-    * **REACH:** Last seen: Date, Status: Ready for Harvest, so-so, and barren. Also Toxic or Deadly (markers)
+    * **REACH:** Last seen: Date, Status: Ready for Harvest, so-so, and barren. Also Toxic or Deadly (markers), Add to Favorites.
 
 
 ## Schedule
