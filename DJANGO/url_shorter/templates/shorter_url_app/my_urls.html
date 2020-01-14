@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% csrf_token %}
 
 <h1>success!</h1>
-<input type="{% url 'my-urls' %}" method="POST">
 
-    {% csrf_token %}
 
-   
-<!-- Add url submissions -->
+<ul>
+    {% for shorty in shorties %}
+        <li><a href="http://localhost:8000/{{ shorty.shorty }}" target="blank">{{ shorty.shorty }}</a></li>
+   <p>the first shorty is an item the second shorty is the model</p>
+    {% empty %}
+        <p>you have no urls to shorten</p>
+    {% endfor %}
+</ul>
 
 {% endblock %}

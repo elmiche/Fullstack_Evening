@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Shorter_url
 
-# Register your models here.
+admin.site.register(Shorter_url)
