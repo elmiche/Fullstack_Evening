@@ -4,7 +4,7 @@
 ### Project Name: Street Biter
 
 ## Overview
-###### Project Goal: Shows coordinates with details on spots where you can find berry bushes and edible plants/trees around portland.
+###### Project Goal: Shows coordinates with details on 'sweet spots' where you can find berry bushes and edible plants/trees around portland.
 
 
 ### Requirements
