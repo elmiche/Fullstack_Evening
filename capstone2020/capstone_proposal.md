@@ -19,13 +19,14 @@
 **What are the major features of your web application:** 
 * User login
 * User Profile
-* Navigation Bar
+* Navigation Bar: Home, user profile, user spots: favorites
 * Users - Adding Coordinate Points 
 * Coordinates with details
     * Plant Type: (user entry) or Black berry, cloud berry, Marrion Berry, Hawethorne, Apple, uknown, etc.
     * Edible: y/n 
     * Date Added
     * Photo/ media upload 
+    * Add to favorites
 * Display on MAP by Leaflet
 * BLOG - Controlled by Admin
 
