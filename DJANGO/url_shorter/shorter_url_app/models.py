@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class Shorter_url(models.Model):
     url = models.URLField()
-    shorty = models.CharField(max_length = 20)
+    shorty = models.CharField(max_length = 20, default='', editable=False)
     date_posted = models.DateTimeField(default=timezone.now)
 
 

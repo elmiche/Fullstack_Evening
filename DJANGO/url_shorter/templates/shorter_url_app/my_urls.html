@@ -3,7 +3,11 @@
 {% block content %}
 
 <h1>success!</h1>
+<input type="{% url 'my-urls' %}" method="POST">
 
+    {% csrf_token %}
+
+   
 <!-- Add url submissions -->
 
 {% endblock %}
