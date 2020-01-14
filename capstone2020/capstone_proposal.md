@@ -10,9 +10,9 @@
 ### Requirements
 ######  Python, HTML, CSS, JavaScript, and Django.
 * Specific and attainable goals: 
-    1. Create a website that shows coordinates with details on local berry bushes and edible plants around portland.
-    2. Complete 1 feature of project per week: framework, database, map, users, API, Front-end  etc.
-    3. Show different types of plants, information about plants, and details entered by users, 
+    1.Create a website that shows coordinates with details on local berry bushes and edible plants around portland.
+    2.Complete 1 feature of project per week: framework, database, map, users, API, Front-end  etc.
+    3.Show different types of plants, information about plants, and details entered by users, 
 **REACH GOAL:** Allows users to update status of plants, including TOXIC plants with different colored symbols on map etc
 
 
@@ -36,7 +36,7 @@
  
 **What libraries or frameworks will you use?**
 * Bootstrap
-* Leaflet API
+* [Leaflet](https://leafletjs.com/) API 
 * Plant-APIs (more research necessary) 
 
 ## Functionality 
