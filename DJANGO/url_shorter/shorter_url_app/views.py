@@ -30,6 +30,6 @@ def url_list(request):
     return render(request,'shorter_url_app/my_urls.html', context)
 
 
-def url_redirect(request, shorty):
-    clicky = Shorter_url.objects.get(shorty = shorty)
+def url_redirect(request, shorty): #this shorty comes from my_urls (2nd shorty)
+    clicky = Shorter_url.objects.get(shorty = shorty) #first shorty is from model, 2nd is from paremeter
     return redirect(clicky.url)
