@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>CRUD APP</h1>
+<p>This is the home view for the CRUD APP</p>
+
+<form action="{% url 'app-home' %}" method="POST">
+{% csrf_token %}
+   Entry: <br><input type="text" name="form-entry" placeholder="enter url here"><br>
+
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+{% endblock %}
