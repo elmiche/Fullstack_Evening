@@ -8,6 +8,7 @@ from .models import Basic_crud_app
 def create(request):
     if request.method == 'POST':
         entry = request.POST['form-entry']
+        Basic_crud_app.objects.create(message = entry) #connect view to Model
         return redirect('app-home') #returns to the home page with the form
     else:
         return render(request,'pages/home.html')
@@ -18,8 +19,8 @@ def read(request):
     context ={
         'blurbs' : items
     }
-    return render(request, 'crud_app/index.html', context)
-
+    return render(request, 'pages/index.html', context)
+                    #from inside the crud_app dir
 
     # this need a render because it needs context and a template
     #does this need a context dictionary? YES
