@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% csrf_token %}
+<h1>Here's the Message</h1>
+
+<p>
+{% for item in blurbs %}
+
+<li>
+{{ item.message }}
+</li>
+
+
+{% endfor %}
+
+
+
+
+{% endblock %}

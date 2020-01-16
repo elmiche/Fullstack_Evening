@@ -7,10 +7,12 @@
 
 <form action="{% url 'app-home' %}" method="POST">
 {% csrf_token %}
-   Entry: <br><input type="text" name="form-entry" placeholder="enter url here"><br>
+   Entry: <br><input type="text" name="form-entry" placeholder="enter message here"><br>
 
     <br>
     <input type="submit" value="submit">
 </form>
+
+
 
 {% endblock %}
