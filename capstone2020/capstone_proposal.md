@@ -60,8 +60,9 @@ Users Adding Coordinates, then leaflet map displays coordinates (very necessary)
 ## Schedule
 ###### weekly 
 Approximately 1 major feauture each week [4- 5 weeks]:
-* Week 1: Templates and User Login, Admin, Navigation Bar
-* Week 2: Set up Model - Creating Coordinate and Displaying on User Profile
-* Week 3: Creating Coordinates, MAPS, APIs
-* Week 4: Adding content, checking Databases and user-accounts
+* Week 1: Templates and User Login, Admin, Navigation Bar--by Jan 22
+        <br>* Basic Styling: Base.html, Front-end, Bootstrap, Place-holders, Pages</br>
+* Week 2: Set up Model - Creating Coordinate and Displaying on User Profile --by Jan 29
+* Week 3: Creating Coordinates, MAPS, APIs --by Feb 5th
+* Week 4: Adding content, checking Databases and user-accounts --by Feb 12th
 * Week 5: Front-end, Boot strap, sussing out details, testing.
