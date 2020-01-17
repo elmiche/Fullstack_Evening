@@ -25,3 +25,10 @@ def read(request):
     # this need a render because it needs context and a template
     #does this need a context dictionary? YES
     #ALSO should I reference a url or should I make a template and refence it with render... MAKE TEMPLATE and RENDER
+
+    # TODO - add redirect to index read view
+
+
+
+
+
