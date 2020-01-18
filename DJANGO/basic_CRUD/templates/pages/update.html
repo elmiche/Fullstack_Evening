@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{% url 'update' blurb.id %}" method="POST">
+    {% csrf_token %}
+    message: <br> <input type="text" name="message" value="{{ blurb.message }}"><br>
+   
+    <input type="submit" value="update">
+</form>
+{% endblock %}
