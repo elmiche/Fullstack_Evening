@@ -5,15 +5,25 @@
 
 
 {% csrf_token %}
-<h1>Here's the Message</h1>
+
+
+<h1>Here's the Messages</h1>
+
 
 <p>
 {% for item in blurbs %}
     <li>
     {{ item.message }}
+    <br>
+    <a href="{% url 'app-home' %}"> Add </a>
+    <a href="{% url 'remove-item' item.id %}">remove</a>
+    <a href="{% url 'update' item.id %}">update</a>
     </li>
+    </br>
 {% endfor %}
 </p>
+
+
 
 
 
