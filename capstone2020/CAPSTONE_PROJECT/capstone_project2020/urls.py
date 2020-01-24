@@ -22,3 +22,4 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('admin/', admin.site.urls),
 ]
+ 
