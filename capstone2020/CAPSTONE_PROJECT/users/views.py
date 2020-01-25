@@ -11,7 +11,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             #flash message - one-time alerts.
             messages.success(request, f'Account created for {username}!')
-            return redirect('app-home')
+            return redirect('login')
         else: 
             messages.warning(request, f'Failed. Please see below and try again.')
             return render(request, 'users/register.html', {'form': form})
