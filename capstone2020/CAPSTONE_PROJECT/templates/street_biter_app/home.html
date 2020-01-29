@@ -18,6 +18,7 @@ crossorigin=""/>
 <div id="container-coords">
     <h4>Know a spot with edible or medicinal plants?</h4>
     <p>Click the button to get your coordinates.</p>
+
 <button onclick="getLocation()">Get Coordinates</button>
 <p id="demo"></p>
 
@@ -36,6 +37,17 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
+
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+L.marker([45.502438399999996,-122.67488600000001]).addTo(map);
+
+var popup = L.popup()
+    .setLatLng([45.502438399999996, -122.67488600000001])
+    .setContent("I am a standalone popup.")
+    .openOn(mymap);
+
+
 </script>
 </div>
 
