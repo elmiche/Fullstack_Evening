@@ -8,3 +8,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user.username} Profile'
+
+
+# class Markers(models.Model):
+#     location:
+#     date_created:
+#     User:
+#     coordinates: PointField
+
+#     x:
+#     y:

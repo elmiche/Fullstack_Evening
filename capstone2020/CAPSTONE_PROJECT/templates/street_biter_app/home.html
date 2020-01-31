@@ -21,6 +21,7 @@ crossorigin=""/>
 
 <button onclick="getLocation()">Get Coordinates</button>
 <p id="demo"></p>
+</div>
 
 <script>
 var x = document.getElementById("demo");
@@ -37,19 +38,8 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
-
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-
-L.marker([45.502438399999996,-122.67488600000001]).addTo(map);
-
-var popup = L.popup()
-    .setLatLng([45.502438399999996, -122.67488600000001])
-    .setContent("I am a standalone popup.")
-    .openOn(mymap);
-
-
 </script>
-</div>
+
 
 <!-- map -->
 <div id="mapid">map</div>
