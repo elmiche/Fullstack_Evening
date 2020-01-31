@@ -5,7 +5,7 @@
 {% block content %}
 
 
-
+ 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
 integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -18,8 +18,10 @@ crossorigin=""/>
 <div id="container-coords">
     <h4>Know a spot with edible or medicinal plants?</h4>
     <p>Click the button to get your coordinates.</p>
+
 <button onclick="getLocation()">Get Coordinates</button>
 <p id="demo"></p>
+</div>
 
 <script>
 var x = document.getElementById("demo");
@@ -37,7 +39,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
-</div>
+
 
 <!-- map -->
 <div id="mapid">map</div>

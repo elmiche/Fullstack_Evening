@@ -1,8 +1,22 @@
 
 
-#mapid { 
-    
+
+
+
+
+.leaflet-container {  /* all maps */
+    width:  600px;
+    height: 400px;
+}
+
+#mapid {
     height: 500px;
-   
 }
  
+
+/* Resize the "display_raw" textbox */
+.django-leaflet-raw-textarea {
+    width: 100%;
+}
+
+
