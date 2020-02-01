@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # from django.contrib.auth.models import get_user_model
 
 class Street_biter(models.Model):
-    date_posted =models.DateTimeField(default=timezone.now, default=None)
+    date_posted =models.DateTimeField(default=timezone.now)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     latitude = models.DecimalField(max_digits=7, decimal_places=7, default=0)
     longitude = models.DecimalField(max_digits=7, decimal_places=7, default=0) 
