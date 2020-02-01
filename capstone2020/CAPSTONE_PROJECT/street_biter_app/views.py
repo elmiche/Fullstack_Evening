@@ -10,3 +10,4 @@ def about(request):
     
 
     
+#TODO add view that saves lat and longs to street_biter model.
