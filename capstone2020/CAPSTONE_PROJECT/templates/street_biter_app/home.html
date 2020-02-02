@@ -1,11 +1,10 @@
 
 {% extends 'base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 
- 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
 integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -24,24 +23,24 @@ crossorigin=""/>
 <p id="demo"></p>
 </div>
 
+<!-- DB Form  -->
+<div class="container-form">
+<form action="save_details" method="post">
+  <label for="details">Details: </label>
+  <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+  <input type="submit" value="OK">
 
-<script>
-var x = document.getElementById("demo");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } 
-  else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
+<p>Select the specimen provided on this drop-down list:</p>
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-
+  <select name="cars">
+    <option value="">Select your option</option>
+    <option value="blackberry">Black berry</option>
+    <option value="lavender">Lavender</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+</div>
 
 
 

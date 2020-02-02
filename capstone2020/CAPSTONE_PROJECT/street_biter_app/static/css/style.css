@@ -29,7 +29,9 @@
     height: 100px;
 }
 
-
+.container-form {
+    padding: 10px;
+}
 
 #container-coords {
     padding: 20px;
