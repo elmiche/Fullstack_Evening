@@ -1,9 +1,5 @@
 
 
-
-
-
-
 var mymap = L.map('mapid').setView([45.50, -122.67], 13);
 
 
@@ -31,6 +27,7 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
+  
   var marker = L.marker([position.coords.latitude,position.coords.longitude]).addTo(mymap);
 
   marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
