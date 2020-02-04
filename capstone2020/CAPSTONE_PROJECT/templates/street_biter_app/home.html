@@ -14,7 +14,7 @@ crossorigin=""/>
 
 
 <!-- Coordinates  -->
-
+<div class="container-form">
 <div id="container-coords">
     <h4>Know a spot with edible or medicinal plants?</h4>
     <p>Click the button to get your coordinates.</p>
@@ -24,15 +24,19 @@ crossorigin=""/>
 </div>
 
 <!-- DB Form  -->
-<div class="container-form">
-<form action="save_details" method="post">
+
+
+  <p>Select the specimen provided on this drop-down list:</p>
+<form action="{% url 'save-details' %}" method="POST">
+  {% csrf_token %}
   <label for="details">Details: </label>
-  <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-  <input type="submit" value="OK">
+  <input id="details" type="text" name="details" placeholder="Add details">
+  <!-- hidden coords values  -->
+  <input type="number" id="lat" class="hidden-coords" name="lat">
+  <input type="number" id="long" class="hidden-coords" name="long">
 
-<p>Select the specimen provided on this drop-down list:</p>
-
-  <select name="cars">
+<!-- Drop-down species list -->
+  <select name="species-list">
     <option value="">Select your option</option>
     <option value="blackberry">Black berry</option>
     <option value="lavender">Lavender</option>
@@ -43,9 +47,10 @@ crossorigin=""/>
 </div>
 
 
-
 <!-- map -->
+<div class="map-stuff">
 <div id="mapid">map</div>
+</div>
 
 
 
