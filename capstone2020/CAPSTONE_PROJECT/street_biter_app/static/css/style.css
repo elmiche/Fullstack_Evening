@@ -1,8 +1,5 @@
 
 
-
-
-
 .leaflet-container {  /* all maps */
     width:  600px;
     height: 400px;
@@ -10,12 +7,16 @@
 
 #mapid {
     height: 500px;
-    padding: 0px;
-    position: static;
-    top: 0;
+    padding: 10px;
+    top: 10px;
     bottom: 0;
-    left: 20px;
     right: 0;
+    float: left;
+}
+
+.map-stuff {
+    float: left;
+    position: sticky;
 }
 
 /* Resize the "display_raw" textbox */
@@ -23,17 +24,18 @@
     width: 100%;
 }
 
-.rounded-circle {
-    width: 100px;
-    height: 100px;
+.hidden-coords {
+    display: none;
 }
 
 .container-form {
     padding: 10px;
+    float: none;
 }
 
-#container-coords {
-    padding: 20px;
-    left: 20px;
+/* #container-coords {
+    padding: 10px;
+    left: 0px;
     position: static;
-}
+} */
+
