@@ -31,17 +31,17 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
   
-  lat.value = position.coords.latitude;
-  long.value = position.coords.longitude;
+  lat.value = String(position.coords.latitude);
+  long.value = String(position.coords.longitude);
   var marker = L.marker([position.coords.latitude,position.coords.longitude]).addTo(mymap);
 
-  marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
+  marker.bindPopup("<b>Marked!</b><br>I am a popup.").openPopup()
 
 }
 
 
 
-long.value
+
 
 // marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 

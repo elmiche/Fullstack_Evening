@@ -4,10 +4,18 @@
 {% block content %}
     <div class="content-section">
       <p> <b>Details: <br> </b> 
-        {{ sweetspot.details }}  </p>
-       
-    </div>
-      
 
+        {{ sweetspot.details }} 
+       </p>
+    </div>
+
+    <div id="details-list">
+      <p><b>user</b>: {{ sweetspot.user }}</p>
+      <p><b>date posted</b>: {{ sweetspot.date_posted }}</p>
+      <p><b>Location</b>: {{ sweetspot.latitude }}, {{ sweetspot.longitude }}</p>
+      <p><b>Description</b>: {{ sweetspot.details }}</p>
+      <p><b>Species</b>: {{ sweetspot.species }}</p>
+      
+    </div>
     
 {% endblock content %}
