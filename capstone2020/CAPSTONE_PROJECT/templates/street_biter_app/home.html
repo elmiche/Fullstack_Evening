@@ -27,19 +27,31 @@ crossorigin=""/>
 
 
   <p>Select the specimen provided on this drop-down list:</p>
-<form action="{% url 'save-details' %}" method="POST">
+<form action="{% url 'save_details' %}" method="POST">
   {% csrf_token %}
   <label for="details">Details: </label>
   <input id="details" type="text" name="details" placeholder="Add details">
   <!-- hidden coords values  -->
-  <input type="number" id="lat" class="hidden-coords" name="lat">
-  <input type="number" id="long" class="hidden-coords" name="long">
+  <input type="text" id="lat" class="hidden-coords" name="lat">
+  <input type="text" id="long" class="hidden-coords" name="long">
 
 <!-- Drop-down species list -->
   <select name="species-list">
     <option value="">Select your option</option>
-    <option value="blackberry">Black berry</option>
+    <option value="blackberry">Black Berry</option>
+    <option value="elderberry">Elder Berry</option>
+    <option value="cloudberry">Cloud Berry</option>
+    <option value="marrionberry">Marrion Berry</option>
     <option value="lavender">Lavender</option>
+    <option value="sage">Sage</option>
+    <option value="rosemary">Rosemary</option>
+    <option value="stjonswort">St. John's Wort</option>
+    <option value="pricklypear">Prickly Pear Cactus</option>
+    <option value="figtree">Fig Tree </option>
+    <option value="persimmontree">Persimmon Tree</option>
+    <option value="kiwitree">Kiwi Tree</option>
+    <option value="appletree">Apple Tree</option>
+    <option value="hawthorne">Hawthorne Tree</option>
   </select>
   <br><br>
   <input type="submit">
