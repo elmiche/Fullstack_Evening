@@ -15,9 +15,9 @@ def about(request):
     return render(request, 'street_biter_app/about.html')
     
 @login_required
-def details(request):
+def details(request, id):
     # sweetspot = Street_biter.objects.filter(user = request.user, latitude=request.latitude, longitude=request.longitude).first()
-    sweetspot = Street_biter.objects.first() #WTF??
+    sweetspot = Street_biter.objects.get(id = id)
     return render(request, 'street_biter_app/details.html', {
             'sweetspot': sweetspot, 
             })
@@ -30,13 +30,13 @@ def save_details(request):
         details = request.POST['details']
         species = request.POST['species-list']
         print(latitude)
-        Street_biter.objects.create(
+        sweetspot = Street_biter.objects.create(
             user = user,
             latitude = latitude,
             longitude = longitude,
             details = details,
             species = species,
         )
-        return redirect('details-view')
+        return redirect('details-view', sweetspot.id)
     else:
         return render(request, 'street_biter_app/app-home')
