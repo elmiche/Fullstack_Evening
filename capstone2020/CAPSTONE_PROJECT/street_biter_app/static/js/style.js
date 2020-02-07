@@ -35,7 +35,7 @@ function showPosition(position) {
   long.value = String(position.coords.longitude);
   var marker = L.marker([position.coords.latitude,position.coords.longitude]).addTo(mymap);
 
-  marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
+  marker.bindPopup("<b>Marked!</b><br>I am a popup.").openPopup()
 
 }
 
