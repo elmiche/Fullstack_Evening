@@ -61,6 +61,21 @@
 }
 
 
+.container-fluid{
+    display: flex;
+    border: solid;
+    border-color: steelblue;
+    border-width: 100%;
+  }
+
+.h3 {
+    text-align: right;
+    font-family: Helvetica;
+    float: right;
+    align-items: center;
+}
+
+
 /* Media Queries */
 /* 
 // Extra small devices (portrait phones, less than 576px)
