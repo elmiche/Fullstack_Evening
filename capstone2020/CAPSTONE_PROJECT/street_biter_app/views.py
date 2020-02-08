@@ -40,3 +40,12 @@ def save_details(request):
         return redirect('details-view', sweetspot.id)
     else:
         return render(request, 'street_biter_app/app-home')
+
+
+
+def my_sweetspots(request):
+    sweetspots = Street_biter.objects.filter(user = request.user)
+    context = {
+        'sweetspots' : sweetspots
+    }
+    return render(request, 'street_biter_app/sweetspots.html', context)

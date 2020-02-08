@@ -1,0 +1,31 @@
+
+// alert("My Sweet Spots")
+
+var mymap = L.map('sweetspotsid').setView([45.50, -122.67], 13);
+
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 20,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoiZWxtaWNoZSIsImEiOiJjazQwb2s2NHowM3Y4M2xwbjJ2NXJhZXZ1In0.-bKylG4SBc4ybZCodZGzKQ'
+}).addTo(mymap);
+
+
+
+// function to save 
+
+function showSweetspots() {
+    let coordsArray = document.querySelectorAll(".mysweetcoords")
+    for (i = 0; i< coordsArray.length; i++){
+        console.log(coordsArray[i].dataset.latitude)
+        console.log(coordsArray[i].dataset.longitude)   
+        let marker = L.marker([coordsArray[i].dataset.latitude,coordsArray[i].dataset.longitude]).addTo(mymap);
+    }
+}
+
+
+
+showSweetspots()
+
+// marker function 
