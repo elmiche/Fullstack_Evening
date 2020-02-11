@@ -1,5 +1,9 @@
 
 
+
+
+
+
 var mymap = L.map('mapid').setView([45.50, -122.67], 13);
 
 
@@ -38,8 +42,6 @@ function showPosition(position) {
   marker.bindPopup("<b>Marked!</b><br>I am a popup.").openPopup()
 
 }
-
-
 
 
 
