@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
+<!-- mobile response -->
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
 integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -12,79 +12,72 @@ crossorigin=""/>
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 
+<div style="max-width: 1200px; margin: 0 auto; padding 10px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12 form">
+  <!-- FORM  -->
+    
+      <div id="container-coords">
+        <h4>Found some edible or medicinal plants?</h4> 
+        <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Get Coordinates</button>
+        <p id="demo"></p>
+      </div>
 
 
+     
 
 
+      <!-- Drop-down species list -->
+      <h5>Select the specimen provided on this drop-down list:</h5>
+      <form action="{% url 'save_details' %}" method="POST">
+      <select name="species-list">
+        <option value="">Select your option</option>
+      <optgroup label="Berries">
+        <option value="blackberry">Black Berry</option>
+        <option value="elderberry">Elder Berry</option>
+        <option value="cloudberry">Cloud Berry</option>
+        <option value="marrionberry">Marrion Berry</option>
+        <option value="lavender">Lavender</option>
+        <option value="sage">Sage</option>
+        <option value="rosemary">Rosemary</option>
+        <option value="stjonswort">St. John's Wort</option>
+        <option value="pricklypear">Prickly Pear Cactus</option>
+      </optgroup>
+      <optgroup label="Trees">
+        <option value="figtree">Fig Tree </option>
+        <option value="persimmontree">Persimmon Tree</option>
+        <option value="kiwitree">Kiwi Tree</option>
+        <option value="appletree">Apple Tree</option>
+        <option value="hawthorne">Hawthorne Tree</option>
+        </optgroup>
+      </select>
+      <br>
 
-<div class="container-fluid">
-<h3> Welcome Street Biters!</h3>
-</div>
-
-  <p></p>
-
-
-  
-<div class="map-page">
-
-<!-- map -->
-<div class="map-stuff">
-  <div id="mapid">map</div>
-  </div>
-  
-<!-- Coordinates  -->
-<div class="container-form">
-<div id="container-coords">
-    <h4>Know a spot with edible or medicinal plants?</h4>
-    <p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Get Coordinates</button>
-<p id="demo"></p>
-</div>
-
-<!-- DB Form  -->
+      <!-- details textbox -->
+      <div class="col-md-4 col-sm-6 col-xs-12 details">
+        <label for="details"><b>Details: </b></label><br>
+        <input id="details" type="text" name="details" placeholder="Add details">
+        <!-- hidden coords values  -->
+        <input type="text" id="lat" class="hidden-coords" name="lat">
+        <input type="text" id="long" class="hidden-coords" name="long">
+        <br>
+        <br>
+        {% csrf_token %}
+        <input type="submit">
+        </form>
+      </div>
+    </div>
 
 
-  <p>Select the specimen provided on this drop-down list:</p>
-<form action="{% url 'save_details' %}" method="POST">
-  {% csrf_token %}
-  
-
-<!-- Drop-down species list -->
-  <select name="species-list">
-    <option value="">Select your option</option>
-  <optgroup label="Berries">
-    <option value="blackberry">Black Berry</option>
-    <option value="elderberry">Elder Berry</option>
-    <option value="cloudberry">Cloud Berry</option>
-    <option value="marrionberry">Marrion Berry</option>
-    <option value="lavender">Lavender</option>
-    <option value="sage">Sage</option>
-    <option value="rosemary">Rosemary</option>
-    <option value="stjonswort">St. John's Wort</option>
-    <option value="pricklypear">Prickly Pear Cactus</option>
-  </optgroup>
-  <optgroup label="Trees">
-    <option value="figtree">Fig Tree </option>
-    <option value="persimmontree">Persimmon Tree</option>
-    <option value="kiwitree">Kiwi Tree</option>
-    <option value="appletree">Apple Tree</option>
-    <option value="hawthorne">Hawthorne Tree</option>
-    </optgroup>
-  </select>
-  <br><br>
-
-<!-- details textbox -->
-<label for="details"><b>Details: </b></label><br>
-  <input id="details" type="text" name="details" placeholder="Add details">
-  <!-- hidden coords values  -->
-  <input type="text" id="lat" class="hidden-coords" name="lat">
-  <input type="text" id="long" class="hidden-coords" name="long">
-<br>
-<br>
-  <input type="submit">
-</form>
-</div>
+      <!-- map -->
+    <div class="col-md-4 col-sm-12 col-xs-12 sidebar">
+        <div class=" map-stuff">
+          <div id="mapid">map</div>
+        </div>
+    </div> 
+  </div> 
 </div>
 
 

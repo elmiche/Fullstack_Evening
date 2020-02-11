@@ -42,7 +42,7 @@ def save_details(request):
         return render(request, 'street_biter_app/app-home')
 
 
-
+@login_required
 def my_sweetspots(request):
     sweetspots = Street_biter.objects.filter(user = request.user)
     context = {

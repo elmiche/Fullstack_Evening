@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
+from street_biter_app.models import Street_biter
 
 def register(request):
     if request.method == 'POST':
@@ -22,4 +23,8 @@ def register(request):
 
 @login_required  #decorator~
 def profile(request):
-    return render(request, 'users/profile.html')
+    sweetspots = Street_biter.objects.filter(user = request.user)
+    context = {
+        'sweetspots' : sweetspots
+    }
+    return render(request, 'users/profile.html', context)
