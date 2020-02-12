@@ -26,6 +26,25 @@
     height: 70px;
 }
 
+
+
+/* About Page  */
+
+.aboutpage {
+    margin-top: 20px;
+    align-content: center;
+    margin-left: 100px;
+}
+
+
+.card-img-top {
+    height: 300px;
+    
+}
+
+
+
+
 /* Home Page Form  */
 .form {
     padding: 10px;
@@ -67,11 +86,6 @@
     height: 500px;
     
 }
-
-/* .sweet-map {
-    margin-left: none;
-    padding-left: none;
-} */
 
 .sweetspot-content {
     height: 100vh;
