@@ -20,7 +20,7 @@ function showSweetspots() {
     let coordsArray = document.querySelectorAll(".mysweetcoords")
     // console.log(coordsArray)
     for (i = 0; i< coordsArray.length; i++){
-        console.log(coordsArray[i].dataset)
+        console.log(coordsArray[i])
         // console.log(coordsArray[i].dataset.longitude)   
         let marker = L.marker([coordsArray[i].dataset.latitude,coordsArray[i].dataset.longitude]).addTo(mymap);
         marker.bindPopup(`<div class="card sweetspot-card">

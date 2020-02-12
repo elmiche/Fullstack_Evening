@@ -22,13 +22,13 @@ crossorigin=""/>
           <div class="col transbox">
           <p id="form-text">
             <h4 id="form-title">Found some edible or medicinal plants?</h4> 
-            <p>Click the button to get your coordinates.</p>
+            <p>1. Click the button to get your coordinates.</p>
             <button onclick="getLocation()">Get Coordinates</button>
             <p id="demo"></p>
 
                     <!-- Drop-down species list -->
           
-            <p>Select the specimen provided on this drop-down list:</p>
+            <p>2. Select the specimen provided on this drop-down list:</p>
             <form action="{% url 'save_details' %}" method="POST">
             <select name="species-list">
               <option value="">Select your option</option>
@@ -56,7 +56,7 @@ crossorigin=""/>
                   <!-- details textbox -->
         <div class="col-md-4 col-sm-6 col-xs-12 details">
           <label for="details"><b>Details: </b></label><br>
-          <input id="details" type="text" name="details" placeholder="Add details">
+          <input id="details" type="text" name="details" placeholder="Add details (optional)">
           
           <!-- hidden coords values  -->
           <input type="text" id="lat" class="hidden-coords" name="lat">
@@ -64,6 +64,8 @@ crossorigin=""/>
           <br>
           <br>
           {% csrf_token %}
+          
+          <p>3. Hit Submit.</p> 
           <input type="submit">
           </form>
         </p>

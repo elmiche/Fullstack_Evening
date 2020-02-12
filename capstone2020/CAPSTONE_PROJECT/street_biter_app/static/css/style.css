@@ -6,6 +6,27 @@
     float: left;
 }
 
+
+/* NavBar Fun  */
+
+.SBlogo {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: none;
+}
+.sbtext {
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bold ;
+    margin-bottom: 20px;
+    padding: none;
+}
+
+.navbar {
+    height: 70px;
+}
+
+/* Home Page Form  */
 .form {
     padding: 10px;
     background-color: rgba(234, 250, 196, 0.733);
@@ -43,14 +64,19 @@
     
 #sweetspotsid {
     width: 100vw;
-    height: 400px;
+    height: 500px;
+    
 }
 
-
+/* .sweet-map {
+    margin-left: none;
+    padding-left: none;
+} */
 
 .sweetspot-content {
     height: 100vh;
-    width: 100vw
+    width: 100vw;
+    padding-left: none;
 }
 
 .sweet-text {
@@ -63,7 +89,7 @@
 
 .sweet-txtbox {
     width: 100vw;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 5px;
     border: 1px solid black;
     background-image: url('/static/street_biter_app/images/background.jpg');
@@ -119,7 +145,7 @@
 .wrapper {	
     width: 100vw;
     height: 100vh;
-    margin-top: none;
+    margin-top: 10px;
     margin-bottom: none;
     background-image: url('/static/street_biter_app/images/background.jpg');
     /* background-color: rgb(88, 173, 169); */

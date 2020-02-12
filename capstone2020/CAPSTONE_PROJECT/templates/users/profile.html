@@ -21,7 +21,10 @@ crossorigin=""/>
           <div class="media-body">
               <h2 class="account-heading"> {{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
-            
+            <p class="user-date">Joined Street Biter: <br> {{ user.date_joined }}</p>
+            <p class="user-lastlog"> Last login: <br> {{ user.last_login }}</p>
+            <p class="text-third"> You have discovered <b>{{ sweetspots.count }}</b> Sweet Spots</p>
+
             </div>
       </div>
     </div>
@@ -39,24 +42,44 @@ crossorigin=""/>
       </div>
       </div>
 
+
+      {% for sweetspot in sweetspots %}
+
+      <!-- map markers  -->
+      <div class="mysweetcoords" 
+          data-latitude="{{ sweetspot.latitude }}" 
+          data-longitude="{{ sweetspot.longitude }}"
+          data-species="{{ sweetspot.species }}"
+          data-sweetspotid="{{ sweetspot.id }}"
+          data-user="{{ sweetspot.user}}">
+      </div> 
+      {% endfor %}
+      
+
+
 <!-- DB markers -->
 
 
 <div class="sweetspot-content">
 
       <div class="map-sweetstuff">
-          <div id="sweetspotsid"></div>
+          <div id="sweetspotsid">
+          </div>
           </div>
       </div>
   
+
+
+
+
     <!-- map markers  -->
-{% for sweetspot in sweetspots %}     
+<!-- {% for sweetspot in sweetspots %}     
 
 
   <div class="mysweetcoords" data-latitude="{{ sweetspot.latitude }}" data-longitude="{{ sweetspot.longitude }}"> 
   </div> 
 
-{% endfor %}
+{% endfor %} -->
 
 
 
