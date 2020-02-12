@@ -10,51 +10,73 @@ crossorigin=""/>
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 
-<div class="sweetspot-content">
+<div class="sweet-txtbox">
+    <div class="sweet-text">
+    <h4>My Sweet Spots</h4>
+    <p>All the places you love on one page</p>
+</div>
+</div>
+
+<div class="container sweetspot-content">
     <div class="row">
-    <div class="col-sm-12">
-        <div class="map-sweetstuff">
-            <div id="sweetspotsid">map</div>
-            </div>
+    <div class="col-sm-12 sweet-map">
+            <div id="sweetspotsid"></div>
+            
         </div>
     </div>
-    <!-- <div class="row row-sm-5">
-        <div class="col col-sm-10" id="card-row1"> -->
-    {% for sweetspot in sweetspots %}
-<!-- 
-        <div class="card sweetspot-card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> Sweetspot No.{{ sweetspot.id }}</h5>
-                <p class="card-text">Details about your discovery</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"> <b>Location:</b> <br> {{ sweetspot.latitude }} {{ sweetspot.longitude }}</li>
-                <li class="list-group-item"><b>User:</b> <br> {{ sweetspot.user }}</li>
-                <li class="list-group-item"><b>Species:</b> <br> {{ sweetspot.species }}</li>
-            </ul>
-            <div class="card-body">
-            <a href="" class="card-link">Read More</a>
-            </div>
-        </div> -->
+    
+        
+{% for sweetspot in sweetspots %}
 
 <!-- map markers  -->
-    <div class="mysweetcoords" 
-                data-latitude="{{ sweetspot.latitude }}" 
-                data-longitude="{{ sweetspot.longitude }}"
-                data-species="{{ sweetspot.species }}"
-                data-sweetspotid="{{ sweetspot.id }}"
-                data-user="{{ sweetspot.user}}">
-    </div> 
+<div class="mysweetcoords" 
+    data-latitude="{{ sweetspot.latitude }}" 
+    data-longitude="{{ sweetspot.longitude }}"
+    data-species="{{ sweetspot.species }}"
+    data-sweetspotid="{{ sweetspot.id }}"
+    data-user="{{ sweetspot.user}}">
+</div> 
+{% endfor %}
 
-    {% endfor %}
-            </div>   
-            </div>
-        </div>
+
+
+&nbsp;
+
+
+
+{% for sweetspot in sweetspots %}
+
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">User</th>
+                <th scope="col">Location</th>
+                <th scope="col">Species</th>
+                <th scope="col">  </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">{{ sweetspot.id }}</th>
+                <td>{{ sweetspot.user }}</td>
+                <td>{{ sweetspot.latitude }} {{ sweetspot.longitude }}</td>
+                <td>{{ sweetspot.species }}</td>
+                <td><a href="">Remove</a> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+  
+{% endfor %}
+
+</div>
             
-
- 
-
 
 
 

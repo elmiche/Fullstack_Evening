@@ -2,6 +2,11 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+  &nbsp;
+
+
+  &nbsp;
+
     <div class="content-section">
       <p> <b>Details: <br> </b> 
 
@@ -10,8 +15,8 @@
     </div>
 
     <div id="details-list">
-      <p><b>user</b>: {{ sweetspot.user }}</p>
-      <p><b>date posted</b>: {{ sweetspot.date_posted }}</p>
+      <p><b>User</b>: {{ sweetspot.user }}</p>
+      <p><b>Date posted</b>: {{ sweetspot.date_posted }}</p>
       <p><b>Location</b>: {{ sweetspot.latitude }}, {{ sweetspot.longitude }}</p>
       <p><b>Description</b>: {{ sweetspot.details }}</p>
       <p><b>Species</b>: {{ sweetspot.species }}</p>

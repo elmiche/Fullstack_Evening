@@ -12,64 +12,67 @@ crossorigin=""/>
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 
-<div style="max-width: 1200px; margin: 0 auto; padding 10px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-sm-12 col-xs-12 form">
-  <!-- FORM  -->
-    
-      <div id="container-coords">
-        <h4>Found some edible or medicinal plants?</h4> 
-        <p>Click the button to get your coordinates.</p>
-        <button onclick="getLocation()">Get Coordinates</button>
-        <p id="demo"></p>
-      </div>
+                    <!-- FORM  -->
+                   
+        <div id="container-coords">
+          <div class="col transbox">
+          <p id="form-text">
+            <h4 id="form-title">Found some edible or medicinal plants?</h4> 
+            <p>1. Click the button to get your coordinates.</p>
+            <button onclick="getLocation()">Get Coordinates</button>
+            <p id="demo"></p>
 
-
-     
-
-
-      <!-- Drop-down species list -->
-      <h5>Select the specimen provided on this drop-down list:</h5>
-      <form action="{% url 'save_details' %}" method="POST">
-      <select name="species-list">
-        <option value="">Select your option</option>
-      <optgroup label="Berries">
-        <option value="blackberry">Black Berry</option>
-        <option value="elderberry">Elder Berry</option>
-        <option value="cloudberry">Cloud Berry</option>
-        <option value="marrionberry">Marrion Berry</option>
-        <option value="lavender">Lavender</option>
-        <option value="sage">Sage</option>
-        <option value="rosemary">Rosemary</option>
-        <option value="stjonswort">St. John's Wort</option>
-        <option value="pricklypear">Prickly Pear Cactus</option>
-      </optgroup>
-      <optgroup label="Trees">
-        <option value="figtree">Fig Tree </option>
-        <option value="persimmontree">Persimmon Tree</option>
-        <option value="kiwitree">Kiwi Tree</option>
-        <option value="appletree">Apple Tree</option>
-        <option value="hawthorne">Hawthorne Tree</option>
-        </optgroup>
-      </select>
-      <br>
-
-      <!-- details textbox -->
-      <div class="col-md-4 col-sm-6 col-xs-12 details">
-        <label for="details"><b>Details: </b></label><br>
-        <input id="details" type="text" name="details" placeholder="Add details">
-        <!-- hidden coords values  -->
-        <input type="text" id="lat" class="hidden-coords" name="lat">
-        <input type="text" id="long" class="hidden-coords" name="long">
-        <br>
-        <br>
-        {% csrf_token %}
-        <input type="submit">
-        </form>
-      </div>
-    </div>
-
+                    <!-- Drop-down species list -->
+          
+            <p>2. Select the specimen provided on this drop-down list:</p>
+            <form action="{% url 'save_details' %}" method="POST">
+            <select name="species-list">
+              <option value="">Select your option</option>
+            <optgroup label="Berries">
+              <option value="blackberry">Black Berry</option>
+              <option value="elderberry">Elder Berry</option>
+              <option value="cloudberry">Cloud Berry</option>
+              <option value="marrionberry">Marrion Berry</option>
+              <option value="lavender">Lavender</option>
+              <option value="sage">Sage</option>
+              <option value="rosemary">Rosemary</option>
+              <option value="stjonswort">St. John's Wort</option>
+              <option value="pricklypear">Prickly Pear Cactus</option>
+            </optgroup>
+            <optgroup label="Trees">
+              <option value="figtree">Fig Tree </option>
+              <option value="persimmontree">Persimmon Tree</option>
+              <option value="kiwitree">Kiwi Tree</option>
+              <option value="appletree">Apple Tree</option>
+              <option value="hawthorne">Hawthorne Tree</option>
+              </optgroup>
+            </select>
+            <br>
+          
+                  <!-- details textbox -->
+        <div class="col-md-4 col-sm-6 col-xs-12 details">
+          <label for="details"><b>Details: </b></label><br>
+          <input id="details" type="text" name="details" placeholder="Add details (optional)">
+          
+          <!-- hidden coords values  -->
+          <input type="text" id="lat" class="hidden-coords" name="lat">
+          <input type="text" id="long" class="hidden-coords" name="long">
+          <br>
+          <br>
+          {% csrf_token %}
+          
+          <p>3. Hit Submit.</p> 
+          <input type="submit">
+          </form>
+        </p>
+        </div>
+        </div>
+        </div>
+  </div>
 
       <!-- map -->
     <div class="col-md-4 col-sm-12 col-xs-12 sidebar">
@@ -77,9 +80,9 @@ crossorigin=""/>
           <div id="mapid">map</div>
         </div>
     </div> 
-  </div> 
+  </div>
 </div>
-
+</div>
 
 
 
