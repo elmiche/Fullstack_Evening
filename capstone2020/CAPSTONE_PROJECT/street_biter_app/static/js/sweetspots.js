@@ -35,7 +35,7 @@ function showSweetspots() {
                 <li class="list-group-item"><b>User:</b> <br> ${coordsArray[i].dataset.user}</li>
             </ul>
             <div class="card-body">
-            <a href="{{ url details }}" class="card-link">Read More</a>
+            <a href="http://127.0.0.1:8000/details/${coordsArray[i].dataset.sweetspotid}" class="card-link">Read More</a>
             </div>
         </div>`)
                            
